@@ -59,11 +59,13 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
 }
 
 .card {
     background-color: var(--clr-primary-desaturated-blue);
-    width: 75%;
+    width: 90%;
+    max-width: 1200px;
     border-radius: var(--br);
     overflow: hidden;
     display: flex;
@@ -74,7 +76,7 @@ body {
     background-image: url("images/image-header-desktop.jpg");
     background-size: cover;
     width: 50%;
-    height: 446px;
+    min-height: 446px;
     order: 1;
 }
 
@@ -140,6 +142,164 @@ body {
     font-size: .7rem;
 }
 
+@media (max-width: 1440px) {
+    .main__heading {
+        font-size: 2.6rem;
+    }
+
+    .main__content {
+        font-size: 1.2rem;
+    }
+    .stats__item-heading {
+        font-size: 2rem;
+    }
+
+    .stats__item-name {
+        font-size: .8rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .main__heading {
+        font-size: 2rem;
+    }
+
+    .main__content {
+        font-size: 1.1rem;
+    }
+
+    .stats {
+        padding-right: 1rem;
+    }
+
+    .stats__item-heading {
+        font-size: 1.5rem;
+    }
+
+    .stats__item-name {
+        font-size: .625rem;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        align-items: unset;
+        height: fit-content;
+    }
+
+    .card {
+        height: fit-content;
+        margin: 2rem 1.5rem 6rem;
+        flex-direction: column;
+    }
+
+    .overlay {
+        width: 100%;
+        min-height: unset;
+        height: 300px;
+        order: unset;
+    }
+
+    .main {
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .main__heading {
+        font-size: 2.5rem;
+    }
+
+    .main__content {
+        font-size: 1.4rem;
+    }
+
+    .stats {
+        padding: unset;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .stats__item {
+        text-align: center;
+    }
+
+    .stats__item-heading {
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .main__heading {
+        font-size: 1.8rem;
+    }
+
+    .main__content {
+        font-size: 1rem;
+    }
+
+    .stats {
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+
+    .stats__item-heading {
+        font-size: 1.5rem;
+    }
+
+    .stats__item-name {
+        font-size: .5rem;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        align-items: unset;
+        height: fit-content;
+    }
+
+    .card {
+        height: fit-content;
+        margin: 2rem 1.5rem 6rem;
+        flex-direction: column;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 250px;
+        order: unset;
+    }
+
+    .main {
+        width: 100%;
+        padding: 2rem;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .main__heading {
+        font-size: 1.8rem;
+    }
+
+    .main__content {
+        font-size: 1rem;
+    }
+
+    .stats {
+        padding: unset;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .stats__item {
+        text-align: center;
+    }
+}
+
 
 
 
@@ -151,8 +311,6 @@ body {
 .attribution {
     position: absolute;
     bottom: 1rem;
-    left: 0;
-    right: 0;
 
     font-size: .750rem;
     text-align: center;
